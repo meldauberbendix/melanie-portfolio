@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Melanie Bendix - Technology Leader & Master Inventor</title>
+<link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAELklEQVR4AeycQW7bMBBFqaTbZNFzODdI7xI4xwqawzQ9QdNcowuny6JqJoCAwggtWeJwhpxnhJEticP5/z9oR10kPqEdAIDQ8acEAAAQ3IHg8nkCAEBwB4LL5wkAAMEdCCp/ks0TYHIi6BEAggY/yQaAyYmgRwAIGvwkGwAmJ4IeASBo8JNsAJicCHoEgGDBH8s1BeD1Pu0O+2G0HL/v0s2xKZF+mwEgoY/j8Gxt9t+L4Yf0Yt2H1fomAHg03GNPNaCoDsBhn25rCFuzxq+79GXNvJbnVAcgpeEpOf18uhi+OW1NrS0DANS0UHiFAwCwwrSepgBAT2me0JK7BAA5Z4KcB4AgQedkAkDOmSDnASBI0DmZAJBzJsh5AAgSdE4mAOScCXIeADoPek4eAMw51Pl1AOg84Dl5ADDnUOfXAaDzgOfkAcCcQ51fB4DOA56TBwBzDnV+HQA6DXipLABY6lSn9wFAp8EulQUAS53q9D4A6DTYpbIMABjDbb5YGobFfdUBuH5M3y2EsubHDlQHQNq4fhwHOTLsHTABQGQLBMPluJPvjHIOnFvJDABp9OohvQgInsbB+H0Fx+trv7/AFACBgHHaAe33FwDAaf/dXJUng0YzAKDhqlJNjfcXAIBSWBplNd5fAAAaSTVUEwAaCkujVQDQcNWg5tolAWCtc53MA4BOglwrAwDWOtfJPADoJMi1MgBgrXOdzAOAToJcKwMA1jrXyTwAaDzIre0DwFYHG58PAI0HuLV9ANjqYOPzAaDxALe2DwBbHWx8PgA0HuDW9gFgq4ONzweARgMs1TYAlHKy0ToA0GhwpdoGgFJONloHABoNrlTbAFDKyQp1/qTy71YAgArBlVris8K7FQCgVDrKdWQHtcYSAKDhasGawzDe/B9+wdLvpUwBeL1PO9n16mmI2Z7G1df08z0ppX9mAEjo4zg8K+mi7EIHTACQ8Bf2x23KDlQH4LBPt8qaKH+GA9UBSGl4SnzcOGAAgBvtNPLmAAC8mRD5DwAaSV+rTQDQcraRugDQSFBabQKAlrON1AWARoLSahMAtJxtpC4ANBKUVpsAoOVsI3UBwHlQ2u0BgLbDzusDgPOAtNsDAG2HndcHAOcBabcHANoOO68PAM4D0m4PALQddl4fAJwGVKstAKjltNN1AMBpMLXaAoBaTjtdBwCcBlOrLQMAyu9xL2WWxv77Ur1p1akOwLXCHvdS5mjsvy/Vm1ad6gCIENl9K0dPw2NPNfwxAUCEieHD5biT75ZDe//9udpq328GgAi9ekgvAoLl0N5/Lzo9D1MAPBsTpTcAiJJ0RicAZIyJchoAoiSd0QkAGWOinAaAKElndAJAxpjap63WAwAr552sCwBOgrBqAwCsnHeyLgA4CcKqDQCwct7JugDgJAirNgDAynkn6wKAcRDWy/8DAAD//xrxuTwAAAAGSURBVAMAGX3xENdKSOAAAAAASUVORK5CYII=">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #1f2937;
+    --secondary: #111827;
+    --accent: #2563eb;
+    --text: #f9fafb;
+    --muted: #9ca3af;
+  }
+  body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: var(--text);
+    background: var(--primary);
+  }
+  h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    margin: 0 0 0.5em;
+  }
+  section {
+    padding: 4rem 1rem;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  .hero {
+    text-align: center;
+    padding-top: 6rem;
+  }
+  .hero h1 {
+    font-size: 3rem;
+    font-weight: 800;
+  }
+  .hero p.tagline {
+    font-size: 1.3rem;
+    color: var(--muted);
+  }
+  .hero p.subtitle {
+    font-size: 1.5rem;
+    font-style: italic;
+    margin-top: 1rem;
+  }
+  .story p {
+    margin-bottom: 1.2rem;
+    font-size: 1.1rem;
+  }
+  .story .highlight {
+    font-size: 1.4rem;
+    font-style: italic;
+  }
+  .experience .job {
+    margin-bottom: 2rem;
+  }
+  .experience .company {
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
+  .experience .role {
+    color: var(--muted);
+    margin-bottom: 0.5rem;
+  }
+  .experience ul {
+    margin-top: 0.5rem;
+    padding-left: 1.2rem;
+  }
+  .experience ul li {
+    margin-bottom: 0.4rem;
+    list-style: disc;
+  }
+  .skills .category {
+    margin-bottom: 1.5rem;
+  }
+  .skills .category h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  .skills ul {
+    padding-left: 1.2rem;
+  }
+  .skills ul li {
+    margin-bottom: 0.3rem;
+    list-style: disc;
+    color: var(--muted);
+  }
+  .projects .project {
+    margin-bottom: 2rem;
+  }
+  .projects .project h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
+  .projects .tags {
+    margin-top: 0.5rem;
+  }
+  .projects .tags span {
+    display: inline-block;
+    margin-right: 0.5rem;
+    margin-bottom: 0.3rem;
+    padding: 0.2rem 0.6rem;
+    border: 1px solid var(--muted);
+    border-radius: 9999px;
+    font-size: 0.8rem;
+    color: var(--muted);
+  }
+  .contact {
+    text-align: center;
+    padding-bottom: 6rem;
+  }
+  .contact h2 {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  .contact a.button {
+    display: inline-block;
+    margin: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    color: var(--primary);
+    background: var(--text);
+    border-radius: 4px;
+    text-decoration: none;
+  }
+  .contact a.button.secondary {
+    background: transparent;
+    color: var(--text);
+    border: 1px solid var(--text);
+  }
+  footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    color: var(--muted);
+    font-size: 0.9rem;
+  }
+</style>
+</head>
+<body>
+  <section class="hero">
+    <h1>Melanie Bendix</h1>
+    <p class="tagline">Technology Leader & Master Inventor</p>
+    <p class="subtitle">Driving AI and automation solutions from conception to market success.</p>
+  </section>
+
+  <section class="story">
+    <h2>My Story</h2>
+    <p>For over 10 years, I've been obsessed with one question:</p>
+    <p class="highlight">How do we make AI work for the enterprise?</p>
+    <p>I started my career as a sales engineer at IBM, helping financial institutions understand automation. But I quickly realized that understanding technology wasn't enough. The real challenge was translating complex AI capabilities into business outcomes.</p>
+    <p class="highlight">So I evolved my approach.</p>
+    <p>I stopped asking "what can this technology do?" and started asking "what should this solve?" That shift changed everything.</p>
+    <p>Today, I lead product strategy and technical roadmaps for IBM's AI portfolio across the world's largest financial institutions—Citi, JPMorgan Chase, Fidelity, American Express. I partner with engineering teams to shape products. I translate customer insights into roadmap priorities. I help sales teams close deals.</p>
+    <p>With 18 patents granted in AI and automation, I don't just talk about innovation—I create it. As a member of IBM's Academy of Technology, I'm among the top 600 technical thought leaders shaping the future of enterprise technology.</p>
+    <p>That's the work I love. And I'm always looking for the next challenge.</p>
+  </section>
+
+  <section class="experience">
+    <h2>The Journey So Far</h2>
+    <div class="job">
+      <div class="company">IBM</div>
+      <div class="role">Manager of Solution Architecture - Financial Services</div>
+      <div class="period">May 2025 — Present</div>
+      <p>Leading product strategy and technical roadmap for IBM's full stack technology portfolio across 11 global financial institutions.</p>
+      <ul>
+        <li>Partner cross-functionally with product management, engineering, and C-suite stakeholders to align AI solutions with client priorities</li>
+        <li>Drive product positioning for AI implementations across regulatory compliance, operational resilience, and customer experience</li>
+        <li>Lead team of 12 senior architects delivering technical presentations to executive leadership</li>
+        <li>Appointed 2025 Master Inventor for sustained innovation leadership in AI and automation</li>
+      </ul>
+    </div>
+    <div class="job">
+      <div class="company">IBM</div>
+      <div class="role">Global Technology Sales Leader - JPMorgan Chase</div>
+      <div class="period">Sept 2023 — May 2025</div>
+      <p>Owned end-to-end product strategy and go-to-market execution for IBM's AI, automation, and hybrid cloud portfolio at one of IBM's largest strategic accounts.</p>
+      <ul>
+        <li>Partnered with JPMC senior technology leaders and IBM product management to shape product roadmap</li>
+        <li>Developed differentiated product positioning enabling multi-year strategic agreements</li>
+        <li>Led cross-functional collaboration to take emerging technologies from conception to enterprise deployment</li>
+      </ul>
+    </div>
+    <div class="job">
+      <div class="company">IBM</div>
+      <div class="role">Technical Product & Sales Lead - Hyperscale Partnerships</div>
+      <div class="period">Oct 2021 — Sept 2023</div>
+      <p>Led product strategy and technical roadmap for custom storage solutions serving Hyperscale clients, driving 0 to 1 product development.</p>
+      <ul>
+        <li>Owned voice of customer through surveys, interviews, and beta testing programs</li>
+        <li>Developed financial models demonstrating 4X TCO savings versus competitive solutions</li>
+        <li>Launched IBM's first GitHub page for storage automation solutions</li>
+        <li>Secured $1M+ sales in greenfield markets through data-driven pricing strategy</li>
+      </ul>
+    </div>
+    <div class="job">
+      <div class="company">IBM</div>
+      <div class="role">Technical Sales GTM Strategy & Operations</div>
+      <div class="period">Apr 2021 — Oct 2021</div>
+      <p>Partnered with leadership to define product strategy, long-term roadmaps, and KPIs for Americas technical sales organization.</p>
+      <ul>
+        <li>Led organizational transformation initiatives enhancing workforce productivity by 20%</li>
+        <li>Developed dashboards tracking product adoption and sales performance</li>
+      </ul>
+    </div>
+    <div class="job">
+      <div class="company">IBM</div>
+      <div class="role">Automation Sales Engineer - Financial Services</div>
+      <div class="period">Aug 2016 — Apr 2021</div>
+      <p>Drove product adoption and market success for IBM's automation portfolio across financial services clients.</p>
+      <ul>
+        <li>Consistently exceeded quotas by 120-882% through deep customer insights</li>
+        <li>Collaborated with development teams to prioritize feature enhancements based on customer feedback</li>
+        <li>Selected for Google's Cloud Learning Workshop (87 participants globally)</li>
+      </ul>
+    </div>
+    <h3>Education</h3>
+    <p><strong>Emory University</strong> — Bachelor's Degree in Computer Science | Applied Mathematics Minor</p>
+  </section>
+
+  <section class="skills">
+    <h2>What I Bring</h2>
+    <div class="category">
+      <h3>Product Management</h3>
+      <ul>
+        <li>Product Strategy</li>
+        <li>Roadmap Development</li>
+        <li>0-to-1 Product Development</li>
+        <li>Customer Insights</li>
+        <li>Market Intelligence</li>
+        <li>Competitive Analysis</li>
+        <li>Pricing Strategy</li>
+        <li>Go-to-Market Strategy</li>
+      </ul>
+    </div>
+    <div class="category">
+      <h3>Technical Sales</h3>
+      <ul>
+        <li>Solution Architecture</li>
+        <li>Technical Demonstrations</li>
+        <li>Proof-of-Concept Development</li>
+        <li>ROI Analysis</li>
+        <li>Sales Enablement</li>
+        <li>Account Strategy</li>
+        <li>Competitive Positioning</li>
+      </ul>
+    </div>
+    <div class="category">
+      <h3>AI & Automation</h3>
+      <ul>
+        <li>Applied AI Applications</li>
+        <li>Conversational AI</li>
+        <li>Large Language Models</li>
+        <li>Intelligent Automation</li>
+        <li>Contact Center AI</li>
+        <li>Process Automation</li>
+        <li>Enterprise AI Solutions</li>
+        <li>Responsible AI Practices</li>
+      </ul>
+    </div>
+    <div class="category">
+      <h3>Cross-Functional Leadership</h3>
+      <ul>
+        <li>Engineering Collaboration</li>
+        <li>UX/UI Partnership</li>
+        <li>Sales & Finance Alignment</li>
+        <li>Executive Presentations</li>
+        <li>Stakeholder Management</li>
+        <li>Product Marketing</li>
+        <li>Business Operations</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="projects">
+    <h2>Recognition & Innovation</h2>
+    <div class="project">
+      <h3>18 Patents Granted</h3>
+      <p>Recognized as a Master Inventor with 18 patents granted in AI, automation, and hybrid cloud technologies. Over 35 additional applications filed, contributing to IBM's intellectual property leadership.</p>
+      <div class="tags">
+        <span>AI</span><span>Automation</span><span>Hybrid Cloud</span><span>Innovation</span>
+      </div>
+    </div>
+    <div class="project">
+      <h3>IBM Academy of Technology</h3>
+      <p>Appointed to IBM's Academy of Technology in 2022—joining the top 600 technical thought leaders globally. Selected for sustained contributions to enterprise technology innovation.</p>
+      <div class="tags">
+        <span>Technical Leadership</span><span>Thought Leadership</span><span>2022</span>
+      </div>
+    </div>
+    <div class="project">
+      <h3>Global Portfolio Leadership</h3>
+      <p>Currently leading product strategy across 11 global financial institutions including Citi, Charles Schwab, Fidelity, and American Express. Driving AI and automation solutions at enterprise scale.</p>
+      <div class="tags">
+        <span>Financial Services</span><span>Enterprise</span><span>Product Strategy</span>
+      </div>
+    </div>
+    <div class="project">
+      <h3>Industry Recognition</h3>
+      <p>2023 IBM Corporate Technical Recognition Honor Book. 2021 Women in IT Awards Next Generation Leader finalist. 2020 Recognition Experience Honoree (top 2,000 globally). 2017 IBM Cloud Rookie of the Year.</p>
+      <div class="tags">
+        <span>Awards</span><span>Recognition</span><span>Leadership</span>
+      </div>
+    </div>
+    <h3>Community</h3>
+    <p>Girls Who Code Technical Instructor & IBM Mentor | Women's Bond Club Member</p>
+  </section>
+
+  <section class="contact">
+    <h2>Let's build something extraordinary.</h2>
+    <p>I'm always open to discussing product strategy, AI innovation, or new opportunities to drive impact at scale.</p>
+    <a class="button" href="mailto:hello@melaniebendix.com">Get in touch</a>
+    <a class="button secondary" href="https://linkedin.com/in/melaniebendix" target="_blank">Connect on LinkedIn</a>
+    <p style="margin-top:2rem;color:var(--muted);">Based in New York, NY</p>
+  </section>
+
+  <footer>
+    &copy; 2025 Melanie Bendix. All rights reserved.
+  </footer>
+</body>
+</html>
