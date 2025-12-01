@@ -41,6 +41,32 @@
       background-color: #334155;
       border-radius: 8px;
     }
+
+    /* -------------------------------------------------------
+       Animation styles for the narrative-driven portfolio
+       ------------------------------------------------------- */
+    /* Animate the hero name to slide up and fade in when the page loads */
+    .animate-name {
+      opacity: 0;
+      transform: translateY(40px);
+      animation: slideIn 1.2s forwards;
+    }
+    @keyframes slideIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    /* Generic reveal on scroll – elements start hidden and slide up when revealed */
+    .reveal-on-scroll {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .reveal-on-scroll.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
   </style>
 </head>
 <body class="bg-gray-900 text-gray-100 leading-relaxed">
@@ -59,8 +85,9 @@
   </header>
 
   <!-- Hero Section -->
-  <section id="hero" class="min-h-screen flex flex-col justify-center items-center text-center px-4 pt-24">
-    <h1 class="text-7xl md:text-8xl lg:text-9xl font-extrabold tracking-tight mb-4">Melanie Bendix</h1>
+  <section id="hero" class="min-h-screen flex flex-col justify-center items-center text-center px-4 pt-24 reveal-on-scroll">
+        <!-- Apply animate-name to make the name flow in on load -->
+        <h1 class="text-7xl md:text-8xl lg:text-9xl font-extrabold tracking-tight mb-4 animate-name">Melanie Bendix</h1>
     <p class="text-xl md:text-2xl uppercase tracking-widest text-blue-400 font-medium mb-2">Technology Leader &amp; Master Inventor</p>
     <p class="text-2xl md:text-3xl italic text-gray-300 max-w-2xl">Driving AI and automation solutions from conception&nbsp;to market success.</p>
     <div class="mt-12 animate-bounce text-gray-500">
@@ -69,7 +96,7 @@
   </section>
 
   <!-- Story / Philosophy Section -->
-  <section id="story" class="py-32 md:py-40 px-6">
+  <section id="story" class="py-32 md:py-40 px-6 reveal-on-scroll">
     <div class="max-w-4xl mx-auto">
       <h2 class="text-5xl md:text-6xl font-bold mb-12">My Story</h2>
       <p class="text-2xl md:text-3xl mb-8">For over 10 years, I’ve been obsessed with one question:</p>
@@ -88,7 +115,7 @@
   </section>
 
   <!-- Experience Timeline Section -->
-  <section id="experience" class="py-24 md:py-32 px-6 bg-gray-800">
+  <section id="experience" class="py-24 md:py-32 px-6 bg-gray-800 reveal-on-scroll">
     <div class="max-w-4xl mx-auto">
       <h2 class="text-5xl md:text-6xl font-bold mb-16">Experience</h2>
       <div class="relative border-l-2 border-gray-700">
@@ -165,7 +192,7 @@
   </section>
 
   <!-- Skills & Expertise Section -->
-  <section id="skills" class="py-20 md:py-28 px-6">
+  <section id="skills" class="py-20 md:py-28 px-6 reveal-on-scroll">
     <div class="max-w-5xl mx-auto">
       <h2 class="text-5xl md:text-6xl font-bold mb-12">Skills &amp; Expertise</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
@@ -228,7 +255,7 @@
   </section>
 
   <!-- Recognition & Innovation Section -->
-  <section id="projects" class="py-24 md:py-32 px-6 bg-gray-800">
+  <section id="projects" class="py-24 md:py-32 px-6 bg-gray-800 reveal-on-scroll">
     <div class="max-w-5xl mx-auto">
       <h2 class="text-5xl md:text-6xl font-bold mb-16">Recognition &amp; Innovation</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -288,7 +315,7 @@
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="py-32 md:py-40 px-6">
+  <section id="contact" class="py-32 md:py-40 px-6 reveal-on-scroll">
     <div class="max-w-3xl mx-auto text-center">
       <h2 class="text-5xl md:text-6xl font-bold mb-8">Let’s build something extraordinary.</h2>
       <p class="text-xl md:text-2xl text-gray-300 mb-12">I’m always open to discussing product strategy, AI innovation or new opportunities to drive impact at scale.</p>
@@ -304,5 +331,24 @@
   <footer class="py-8 border-t border-gray-800 bg-gray-900 text-center text-gray-500 text-sm">
     &copy; 2025 Melanie Bendix. All rights reserved.
   </footer>
+
+  <!-- Scroll reveal script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // IntersectionObserver to reveal elements on scroll
+      const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+            obs.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+      // Observe all elements with the reveal-on-scroll class
+      document.querySelectorAll('.reveal-on-scroll').forEach(el => {
+        observer.observe(el);
+      });
+    });
+  </script>
 </body>
 </html>
