@@ -1,0 +1,354 @@
+<!--
+  Melanie Bendix Portfolio – Version 2
+
+  This file implements a narrative-driven, minimal portfolio inspired by the wabi.ai aesthetic.
+  It retains the original content while re‑imagining the layout using large typography,
+  generous spacing and a monochromatic color palette.  Sections unfold as you scroll,
+  guiding the reader through Melanie’s professional story, experience, skills and
+  recognitions.  Built with utility classes from Tailwind CSS for rapid styling.
+
+  To view this version locally, open this file in a browser or deploy it to GitHub
+  Pages within a subfolder (e.g. /v2/).  It doesn’t replace the original index.html.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Melanie Bendix – Portfolio v2</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Tailwind CSS CDN: utility classes for rapid development -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Customize Tailwind’s default theme for dark mode and typography */
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    h1, h2, h3, h4 {
+      font-family: 'Playfair Display', serif;
+    }
+    /* Scrollbar styling for consistency with dark theme */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0f172a;
+    }
+    ::-webkit-scrollbar-thumb {
+      background-color: #334155;
+      border-radius: 8px;
+    }
+
+    /* -------------------------------------------------------
+       Animation styles for the narrative-driven portfolio
+       ------------------------------------------------------- */
+    /* Animate the hero name to slide up and fade in when the page loads */
+    .animate-name {
+      opacity: 0;
+      transform: translateY(40px);
+      animation: slideIn 1.2s forwards;
+    }
+    @keyframes slideIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    /* Generic reveal on scroll – elements start hidden and slide up when revealed */
+    .reveal-on-scroll {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .reveal-on-scroll.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body class="bg-gray-900 text-gray-100 leading-relaxed">
+  <!-- Fixed navigation header -->
+  <header class="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-gray-900/70 border-b border-gray-800">
+    <div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
+      <a href="#hero" class="text-xl font-semibold tracking-wide hover:text-blue-500 transition-colors">Melanie Bendix</a>
+      <nav class="space-x-6 hidden md:flex">
+        <a href="#story" class="text-sm uppercase tracking-wide hover:text-blue-500 transition-colors">Story</a>
+        <a href="#experience" class="text-sm uppercase tracking-wide hover:text-blue-500 transition-colors">Experience</a>
+        <a href="#skills" class="text-sm uppercase tracking-wide hover:text-blue-500 transition-colors">Skills</a>
+        <a href="#projects" class="text-sm uppercase tracking-wide hover:text-blue-500 transition-colors">Recognition</a>
+        <a href="#contact" class="text-sm uppercase tracking-wide hover:text-blue-500 transition-colors">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="min-h-screen flex flex-col justify-center items-center text-center px-4 pt-24 reveal-on-scroll">
+        <!-- Apply animate-name to make the name flow in on load -->
+        <h1 class="text-7xl md:text-8xl lg:text-9xl font-extrabold tracking-tight mb-4 animate-name">Melanie Bendix</h1>
+    <p class="text-xl md:text-2xl uppercase tracking-widest text-blue-400 font-medium mb-2">Technology Leader &amp; Master Inventor</p>
+    <p class="text-2xl md:text-3xl italic text-gray-300 max-w-2xl">Driving AI and automation solutions from conception&nbsp;to market success.</p>
+    <div class="mt-12 animate-bounce text-gray-500">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+    </div>
+  </section>
+
+  <!-- Story / Philosophy Section -->
+  <section id="story" class="py-32 md:py-40 px-6 reveal-on-scroll">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-5xl md:text-6xl font-bold mb-12">My Story</h2>
+      <p class="text-2xl md:text-3xl mb-8">For over 10 years, I’ve been obsessed with one question:</p>
+      <blockquote class="text-3xl md:text-4xl italic font-semibold text-gray-200 mb-12 border-l-4 border-blue-500 pl-6">
+        How do we make AI work for the enterprise?
+      </blockquote>
+      <div class="space-y-8 text-lg md:text-2xl text-gray-300">
+        <p>I began my career as a sales engineer at IBM, helping financial institutions understand automation. But I quickly realized that understanding technology wasn’t enough. The real challenge was translating complex AI capabilities into business outcomes.</p>
+        <p class="italic text-gray-200 text-2xl md:text-3xl font-medium">So I evolved my approach.</p>
+        <p>I stopped asking “what can this technology do?” and started asking “what should this solve?” That shift changed everything.</p>
+        <p>Today, I lead product strategy and technical roadmaps for IBM’s AI portfolio across the world’s largest financial institutions—Citi, JPMorgan Chase, Fidelity, American Express. I partner with engineering teams to shape products, translate customer insights into roadmap priorities, and help sales teams close deals.</p>
+        <p>With 18 patents granted in AI and automation, I don’t just talk about innovation — I create it. As a member of IBM’s Academy of Technology, I’m among the top 600 technical thought leaders shaping the future of enterprise technology.</p>
+        <p>That’s the work I love. And I’m always looking for the next challenge.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Timeline Section -->
+  <section id="experience" class="py-24 md:py-32 px-6 bg-gray-800 reveal-on-scroll">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-5xl md:text-6xl font-bold mb-16">Experience</h2>
+      <div class="relative border-l-2 border-gray-700">
+        <!-- Job 1 -->
+        <div class="mb-16 pl-10 relative">
+          <div class="absolute left-0 top-1 w-4 h-4 bg-blue-500 rounded-full transform -translate-x-1/2"></div>
+          <h3 class="text-3xl md:text-4xl font-semibold">Manager of Solution Architecture – Financial Services</h3>
+          <span class="block uppercase tracking-widest text-sm text-gray-400 mt-1">IBM • May 2025 – Present</span>
+          <p class="mt-4 text-lg md:text-xl text-gray-300">Leading product strategy and technical roadmap for IBM’s full stack technology portfolio across 11 global financial institutions.</p>
+          <ul class="mt-4 list-disc list-inside space-y-2 text-gray-400 text-base md:text-lg">
+            <li>Partner cross‑functionally with product management, engineering and C‑suite stakeholders to align AI solutions with client priorities</li>
+            <li>Drive product positioning for AI implementations across regulatory compliance, operational resilience and customer experience</li>
+            <li>Lead a team of 12 senior architects delivering technical presentations to executive leadership</li>
+            <li>Appointed 2025 Master Inventor for sustained innovation leadership in AI and automation</li>
+          </ul>
+        </div>
+        <!-- Job 2 -->
+        <div class="mb-16 pl-10 relative">
+          <div class="absolute left-0 top-1 w-4 h-4 bg-blue-500 rounded-full transform -translate-x-1/2"></div>
+          <h3 class="text-3xl md:text-4xl font-semibold">Global Technology Sales Leader – JPMorgan Chase</h3>
+          <span class="block uppercase tracking-widest text-sm text-gray-400 mt-1">IBM • Sept 2023 – May 2025</span>
+          <p class="mt-4 text-lg md:text-xl text-gray-300">Owned end‑to‑end product strategy and go‑to‑market execution for IBM’s AI, automation and hybrid cloud portfolio at one of IBM’s largest strategic accounts.</p>
+          <ul class="mt-4 list-disc list-inside space-y-2 text-gray-400 text-base md:text-lg">
+            <li>Partnered with JPMC senior technology leaders and IBM product management to shape product roadmap</li>
+            <li>Developed differentiated product positioning enabling multi‑year strategic agreements</li>
+            <li>Led cross‑functional collaboration to take emerging technologies from conception to enterprise deployment</li>
+          </ul>
+        </div>
+        <!-- Job 3 -->
+        <div class="mb-16 pl-10 relative">
+          <div class="absolute left-0 top-1 w-4 h-4 bg-blue-500 rounded-full transform -translate-x-1/2"></div>
+          <h3 class="text-3xl md:text-4xl font-semibold">Technical Product &amp; Sales Lead – Hyperscale Partnerships</h3>
+          <span class="block uppercase tracking-widest text-sm text-gray-400 mt-1">IBM • Oct 2021 – Sept 2023</span>
+          <p class="mt-4 text-lg md:text-xl text-gray-300">Led product strategy and technical roadmap for custom storage solutions serving hyperscale clients, driving 0 to 1 product development.</p>
+          <ul class="mt-4 list-disc list-inside space-y-2 text-gray-400 text-base md:text-lg">
+            <li>Owned voice of customer through surveys, interviews and beta testing programs</li>
+            <li>Developed financial models demonstrating 4× TCO savings versus competitive solutions</li>
+            <li>Launched IBM’s first GitHub page for storage automation solutions</li>
+            <li>Secured $1M+ sales in greenfield markets through data‑driven pricing strategy</li>
+          </ul>
+        </div>
+        <!-- Job 4 -->
+        <div class="mb-16 pl-10 relative">
+          <div class="absolute left-0 top-1 w-4 h-4 bg-blue-500 rounded-full transform -translate-x-1/2"></div>
+          <h3 class="text-3xl md:text-4xl font-semibold">Technical Sales GTM Strategy &amp; Operations</h3>
+          <span class="block uppercase tracking-widest text-sm text-gray-400 mt-1">IBM • Apr 2021 – Oct 2021</span>
+          <p class="mt-4 text-lg md:text-xl text-gray-300">Partnered with leadership to define product strategy, long‑term roadmaps and KPIs for Americas technical sales organization.</p>
+          <ul class="mt-4 list-disc list-inside space-y-2 text-gray-400 text-base md:text-lg">
+            <li>Led organizational transformation initiatives enhancing workforce productivity by 20%</li>
+            <li>Developed dashboards tracking product adoption and sales performance</li>
+          </ul>
+        </div>
+        <!-- Job 5 -->
+        <div class="mb-16 pl-10 relative">
+          <div class="absolute left-0 top-1 w-4 h-4 bg-blue-500 rounded-full transform -translate-x-1/2"></div>
+          <h3 class="text-3xl md:text-4xl font-semibold">Automation Sales Engineer – Financial Services</h3>
+          <span class="block uppercase tracking-widest text-sm text-gray-400 mt-1">IBM • Aug 2016 – Apr 2021</span>
+          <p class="mt-4 text-lg md:text-xl text-gray-300">Drove product adoption and market success for IBM’s automation portfolio across financial services clients.</p>
+          <ul class="mt-4 list-disc list-inside space-y-2 text-gray-400 text-base md:text-lg">
+            <li>Consistently exceeded quotas by 120–882% through deep customer insights</li>
+            <li>Collaborated with development teams to prioritize feature enhancements based on customer feedback</li>
+            <li>Selected for Google’s Cloud Learning Workshop (87 participants globally)</li>
+          </ul>
+        </div>
+        <!-- Education -->
+        <div class="pl-10 relative">
+          <div class="absolute left-0 top-1 w-4 h-4 bg-blue-500 rounded-full transform -translate-x-1/2"></div>
+          <h3 class="text-3xl md:text-4xl font-semibold">Education</h3>
+          <span class="block uppercase tracking-widest text-sm text-gray-400 mt-1">Emory University</span>
+          <p class="mt-4 text-lg md:text-xl text-gray-300">Bachelor’s degree in Computer Science with a minor in Applied Mathematics.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills & Expertise Section -->
+  <section id="skills" class="py-20 md:py-28 px-6 reveal-on-scroll">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-5xl md:text-6xl font-bold mb-12">Skills &amp; Expertise</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+        <!-- Product Management -->
+        <div>
+          <h3 class="text-3xl font-semibold mb-4">Product Management</h3>
+          <ul class="space-y-2 text-gray-300 text-lg md:text-xl list-disc list-inside">
+            <li>Product Strategy</li>
+            <li>Roadmap Development</li>
+            <li>0‑to‑1 Product Development</li>
+            <li>Customer Insights</li>
+            <li>Market Intelligence</li>
+            <li>Competitive Analysis</li>
+            <li>Pricing Strategy</li>
+            <li>Go‑to‑Market Strategy</li>
+          </ul>
+        </div>
+        <!-- Technical Sales -->
+        <div>
+          <h3 class="text-3xl font-semibold mb-4">Technical Sales</h3>
+          <ul class="space-y-2 text-gray-300 text-lg md:text-xl list-disc list-inside">
+            <li>Solution Architecture</li>
+            <li>Technical Demonstrations</li>
+            <li>Proof‑of‑Concept Development</li>
+            <li>ROI Analysis</li>
+            <li>Sales Enablement</li>
+            <li>Account Strategy</li>
+            <li>Competitive Positioning</li>
+          </ul>
+        </div>
+        <!-- AI & Automation -->
+        <div>
+          <h3 class="text-3xl font-semibold mb-4">AI &amp; Automation</h3>
+          <ul class="space-y-2 text-gray-300 text-lg md:text-xl list-disc list-inside">
+            <li>Applied AI Applications</li>
+            <li>Conversational AI</li>
+            <li>Large Language Models</li>
+            <li>Intelligent Automation</li>
+            <li>Contact Center AI</li>
+            <li>Process Automation</li>
+            <li>Enterprise AI Solutions</li>
+            <li>Responsible AI Practices</li>
+          </ul>
+        </div>
+        <!-- Cross‑Functional Leadership -->
+        <div>
+          <h3 class="text-3xl font-semibold mb-4">Cross‑Functional Leadership</h3>
+          <ul class="space-y-2 text-gray-300 text-lg md:text-xl list-disc list-inside">
+            <li>Engineering Collaboration</li>
+            <li>UX/UI Partnership</li>
+            <li>Sales &amp; Finance Alignment</li>
+            <li>Executive Presentations</li>
+            <li>Stakeholder Management</li>
+            <li>Product Marketing</li>
+            <li>Business Operations</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recognition & Innovation Section -->
+  <section id="projects" class="py-24 md:py-32 px-6 bg-gray-800 reveal-on-scroll">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-5xl md:text-6xl font-bold mb-16">Recognition &amp; Innovation</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <!-- Patent Card -->
+        <div class="border border-gray-700 rounded-lg p-8 hover:border-blue-500 transition-colors">
+          <h3 class="text-3xl font-semibold mb-4">18 Patents Granted</h3>
+          <p class="text-lg md:text-xl text-gray-300 mb-4">Recognized as a Master Inventor with 18 patents granted in AI, automation and hybrid cloud technologies. Over 35 additional applications filed, contributing to IBM’s intellectual property leadership.</p>
+          <div class="flex flex-wrap gap-2 text-xs uppercase tracking-wider text-gray-400">
+            <span class="px-2 py-1 border border-gray-600 rounded-full">AI</span>
+            <span class="px-2 py-1 border border-gray-600 rounded-full">Automation</span>
+            <span class="px-2 py-1 border border-gray-600 rounded-full">Hybrid Cloud</span>
+            <span class="px-2 py-1 border border-gray-600 rounded-full">Innovation</span>
+          </div>
+        </div>
+        <!-- Academy Card -->
+        <div class="border border-gray-700 rounded-lg p-8 hover:border-blue-500 transition-colors">
+          <h3 class="text-3xl font-semibold mb-4">IBM Academy of Technology</h3>
+          <p class="text-lg md:text-xl text-gray-300 mb-4">Appointed to IBM’s Academy of Technology in 2022 — joining the top 600 technical thought leaders globally. Selected for sustained contributions to enterprise technology innovation.</p>
+          <div class="flex flex-wrap gap-2 text-xs uppercase tracking-wider text-gray-400">
+            <span class="px-2 py-1 border border-gray-600 rounded-full">Technical Leadership</span>
+            <span class="px-2 py-1 border border-gray-600 rounded-full">Thought Leadership</span>
+            <span class="px-2 py-1 border border-gray-600 rounded-full">2022</span>
+          </div>
+        </div>
+        <!-- Portfolio Leadership Card -->
+        <div class="border border-gray-700 rounded-lg p-8 hover:border-blue-500 transition-colors">
+          <h3 class="text-3xl font-semibold mb-4">Global Portfolio Leadership</h3>
+          <p class="text-lg md:text-xl text-gray-300 mb-4">Currently leading product strategy across 11 global financial institutions including Citi, Charles Schwab, Fidelity and American Express. Driving AI and automation solutions at enterprise scale.</p>
+          <div class="flex flex-wrap gap-2 text-xs uppercase tracking-wider text-gray-400">
+            <span class="px-2 py-1 border border-gray-600 rounded-full">Financial Services</span>
+            <span class="px-2 py-1 border border-gray-600 rounded-full">Enterprise</span>
+            <span class="px-2 py-1 border border-gray-600 rounded-full">Product Strategy</span>
+          </div>
+        </div>
+        <!-- Industry Recognition Card -->
+        <div class="border border-gray-700 rounded-lg p-8 hover:border-blue-500 transition-colors">
+          <h3 class="text-3xl font-semibold mb-4">Industry Recognition</h3>
+          <p class="text-lg md:text-xl text-gray-300 mb-4">2023 IBM Corporate Technical Recognition Honor Book. 2021 Women in IT Awards Next Generation Leader finalist. 2020 Recognition Experience Honoree (top 2,000 globally). 2017 IBM Cloud Rookie of the Year.</p>
+          <div class="flex flex-wrap gap-2 text-xs uppercase tracking-wider text-gray-400">
+            <span class="px-2 py-1 border border-gray-600 rounded-full">Awards</span>
+            <span class="px-2 py-1 border border-gray-600 rounded-full">Recognition</span>
+            <span class="px-2 py-1 border border-gray-600 rounded-full">Leadership</span>
+          </div>
+        </div>
+        <!-- Community Card -->
+        <div class="border border-gray-700 rounded-lg p-8 hover:border-blue-500 transition-colors md:col-span-2">
+          <h3 class="text-3xl font-semibold mb-4">Community</h3>
+          <p class="text-lg md:text-xl text-gray-300 mb-4">Girls Who Code technical instructor &amp; IBM mentor. Women’s Bond Club member.</p>
+          <div class="flex flex-wrap gap-2 text-xs uppercase tracking-wider text-gray-400">
+            <span class="px-2 py-1 border border-gray-600 rounded-full">Mentorship</span>
+            <span class="px-2 py-1 border border-gray-600 rounded-full">Community</span>
+            <span class="px-2 py-1 border border-gray-600 rounded-full">Diversity</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-32 md:py-40 px-6 reveal-on-scroll">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="text-5xl md:text-6xl font-bold mb-8">Let’s build something extraordinary.</h2>
+      <p class="text-xl md:text-2xl text-gray-300 mb-12">I’m always open to discussing product strategy, AI innovation or new opportunities to drive impact at scale.</p>
+      <div class="flex flex-col sm:flex-row justify-center items-center gap-6 mb-8">
+        <a href="mailto:melaniepdauber@gmail.com" class="px-6 py-3 text-lg md:text-xl font-medium bg-blue-500 text-gray-900 rounded hover:bg-blue-600 transition-colors">Get in touch</a>
+        <a href="https://www.linkedin.com/in/melaniedauber" target="_blank" rel="noopener" class="px-6 py-3 text-lg md:text-xl font-medium border border-gray-600 rounded hover:border-blue-500 hover:text-blue-400 transition-colors">Connect on LinkedIn</a>
+      </div>
+      <p class="text-gray-500 text-lg">Based in New York, NY</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-8 border-t border-gray-800 bg-gray-900 text-center text-gray-500 text-sm">
+    &copy; 2025 Melanie Bendix. All rights reserved.
+  </footer>
+
+  <!-- Scroll reveal script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // IntersectionObserver to reveal elements on scroll
+      const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+            obs.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+      // Observe all elements with the reveal-on-scroll class
+      document.querySelectorAll('.reveal-on-scroll').forEach(el => {
+        observer.observe(el);
+      });
+    });
+  </script>
+</body>
+</html>
